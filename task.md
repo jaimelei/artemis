@@ -80,9 +80,9 @@ Organized as feature branches with atomic commits. Build only what the current p
 
 ---
 
-- [ ] Create `src/pages/home/components/BrandIntro.tsx` — ivory section, centered prose, decorative MoonIcon, exact copy
-- [ ] Create `src/assets/icons/StarIcon.tsx` — needed by SectionDivider
-- [ ] Create `src/components/layout/SectionDivider.tsx` — gold line + star motif, `aria-hidden`
+- [x] Create `src/pages/home/components/BrandIntro.tsx` — ivory section, centered prose, decorative MoonIcon, exact copy
+- [x] Create `src/assets/icons/StarIcon.tsx` — needed by SectionDivider
+- [x] Create `src/components/layout/SectionDivider.tsx` — gold line + star motif, `aria-hidden`
 - [ ] **Commit:** `feat: brand intro section and section divider`
 
 ---
