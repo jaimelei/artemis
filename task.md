@@ -6,36 +6,37 @@ Organized as feature branches with atomic commits. Build only what the current p
 
 ## Branch: `setup/foundation`
 
-- [ ] Install Framer Motion — `npm install framer-motion`
-- [ ] Delete `src/App.css`
-- [ ] Delete `src/pages/landing-page/`
-- [ ] **Commit:** `chore: remove scaffold boilerplate`
+- [x] Install Framer Motion — `npm install framer-motion` (Confirmed already installed)
+- [x] Delete `src/App.css`
+- [x] Delete `src/pages/landing-page/`
+- [x] **Commit:** `chore: remove scaffold boilerplate` (Skipped per instruction)
 
 ---
 
-- [ ] Extend `tailwind.config.js` — colors, fonts, `maxWidth`, `fontSize` tokens (see plan §1.1)
-- [ ] **Commit:** `chore: add design tokens to tailwind config`
+- [x] Extend `tailwind.config.js` — colors, fonts, `maxWidth`, `fontSize` tokens (see plan §1.1)
+- [x] **Commit:** `chore: add design tokens to tailwind config` (Skipped per instruction)
 
 ---
 
-- [ ] Update `index.html` — Google Fonts link tags (Fraunces, Inter, Caveat), updated `<title>`, meta description, OG tags, JSON-LD schema, `bg-moon-ivory` on `<body>`
-- [ ] **Commit:** `chore: add fonts, meta tags, and JSON-LD to index.html`
+- [x] Update `index.html` — Google Fonts link tags (Fraunces, Inter, Caveat), updated `<title>`, meta description, OG tags, JSON-LD schema, `bg-moon-ivory` on `<body>`
+- [x] **Commit:** `chore: add fonts, meta tags, and JSON-LD to index.html` (Skipped per instruction)
 
 ---
 
-- [ ] Replace `src/index.css` — Tailwind directives, base body/heading/link styles, global `focus-visible` ring, `prefers-reduced-motion` blanket disable
-- [ ] **Commit:** `style: global base styles and reduced-motion support`
+- [x] Replace `src/index.css` — Tailwind directives, base body/heading/link styles, global `focus-visible` ring, `prefers-reduced-motion` blanket disable
+- [x] **Commit:** `style: global base styles and reduced-motion support` (Skipped per instruction)
 
 ---
 
-- [ ] Create `src/types/index.ts` — `ShelfItem`, `EventItem`, `NavLinkItem`, `PageMeta`
-- [ ] **Commit:** `feat: add shared TypeScript types`
+- [x] Create `src/types/index.ts` — `ShelfItem`, `EventItem`, `NavLinkItem`, `PageMeta`
+- [x] **Commit:** `feat: add shared TypeScript types` (Skipped per instruction)
 
 ---
 
-- [ ] Create `src/hooks/useReducedMotion.ts`
-- [ ] Create `src/hooks/usePageMeta.ts`
-- [ ] **Commit:** `feat: add useReducedMotion and usePageMeta hooks`
+- [x] Create `src/hooks/useReducedMotion.ts`
+- [x] Create `src/hooks/usePageMeta.ts`
+- [x] **Commit:** `feat: add useReducedMotion and usePageMeta hooks` (Skipped per instruction)
+
 
 ---
 

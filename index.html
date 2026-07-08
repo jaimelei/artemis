@@ -4,10 +4,44 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>artemis</title>
+    <title>Moonbound Café, Artemis — A Hidden Library Café</title>
+    <meta name="description" content="A hidden library café where books, coffee, and moonlight meet. Come lose track of time beneath the moon." />
+    <meta property="og:title" content="Moonbound Café, Artemis" />
+    <meta property="og:description" content="A hidden library café where books, coffee, and moonlight meet." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/images/og-image.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CafeOrCoffeeShop",
+      "name": "Moonbound Café, Artemis",
+      "description": "A hidden library café where visitors lose track of time beneath the moon.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "23 Crescent Lane",
+        "addressLocality": "Moonhaven",
+        "addressRegion": "OR",
+        "postalCode": "97401",
+        "addressCountry": "US"
+      },
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "opens": "00:00", "closes": "00:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday"], "opens": "08:00", "closes": "21:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday","Saturday"], "opens": "08:00", "closes": "23:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "09:00", "closes": "19:00" }
+      ],
+      "email": "hello@moonboundcafe.com",
+      "url": "https://moonboundcafe.com"
+    }
+    </script>
   </head>
-  <body>
+  <body class="bg-moon-ivory">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
+

@@ -2,15 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Hide scrollbar globally */
-* {
-  -ms-overflow-style: none;
-  /* IE and Edge */
-  scrollbar-width: none;
-  /* Firefox */
-}
+@layer base {
+  /* Smooth scrolling — disabled for reduced motion */
+  html {
+    scroll-behavior: smooth;
+  }
 
-*::-webkit-scrollbar {
-  display: none;
-  /* Chrome, Safari, Opera */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* Base body */
+  body {
+    @apply bg-moon-ivory text-ink-black font-sans antialiased;
+    line-height: 1.75;
+  }
+
+  /* Typography defaults */
+  h1, h2, h3, h4 {
+    @apply font-serif text-ink-black;
+    line-height: 1.2;
+  }
+
+  /* Custom focus ring — brand-colored, visible on all interactive elements */
+  *:focus-visible {
+    @apply outline-2 outline-offset-2 outline-warm-amber;
+    outline-style: solid;
+  }
+
+  /* Remove default link underlines — controlled per component */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  /* Image defaults */
+  img {
+    @apply max-w-full h-auto block;
+  }
 }
