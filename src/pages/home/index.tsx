@@ -1,3 +1,14 @@
+import { usePageMeta } from '../../hooks/usePageMeta';
+import { pageMeta } from '../../data/siteMetadata';
+import { Hero } from './components/Hero';
+
 export default function Home() {
-  return <div className="p-8 text-center"><h1 className="text-3xl font-serif">Home Page Placeholder</h1></div>;
+  usePageMeta(pageMeta.home.title, pageMeta.home.description);
+
+  return (
+    <>
+      <Hero />
+      {/* TODO: BrandIntro, SectionDivider, Doorways */}
+    </>
+  );
 }
