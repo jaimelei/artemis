@@ -87,8 +87,8 @@ Organized as feature branches with atomic commits. Build only what the current p
 
 ---
 
-- [ ] Generate images: `doorway-story.jpg`, `doorway-shelves.jpg`, `doorway-events.jpg` — place in `public/images/` (use ChatGPT prompts from plan §Phase 5)
-- [ ] Create `src/pages/home/components/Doorways.tsx` — 3-card grid with images, hover scale, links to inner pages
+- [x] Generate images: `doorway-story.jpg`, `doorway-shelves.jpg`, `doorway-events.jpg` — place in `public/images/` (use ChatGPT prompts from plan §Phase 5)
+- [x] Create `src/pages/home/components/Doorways.tsx` — 3-card grid with images, hover scale, links to inner pages
 - [ ] **Commit:** `feat: home doorways section with images`
 
 ---
