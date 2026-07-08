@@ -44,28 +44,29 @@ Organized as feature branches with atomic commits. Build only what the current p
 
 > Goal: get a working shell with nav, footer, and routing before any page content.
 
-- [ ] Create `src/data/navigation.ts` — `navLinks` array
-- [ ] Create `src/components/layout/Navbar.tsx` — desktop + mobile toggle (no icon library), active link state via `useLocation`
-- [ ] **Commit:** `feat: navbar with desktop and mobile toggle`
+- [x] Create `src/data/navigation.ts` — `navLinks` array
+- [x] Create `src/components/layout/Navbar.tsx` — desktop + mobile toggle (no icon library), active link state via `useLocation`
+- [x] **Commit:** `feat: navbar with desktop and mobile toggle` (Skipped per instruction)
 
 ---
 
-- [ ] Create `src/components/common/SkipToContent.tsx` — skip link to `#main-content`
-- [ ] Create `src/data/siteMetadata.ts` — `pageMeta` per page, `contactInfo` (address, hours, directions, social)
-- [ ] Create `src/components/layout/Footer.tsx` — nav links, email, Instagram, "est." line
-- [ ] **Commit:** `feat: footer with nav links and contact info`
+- [x] Create `src/components/common/SkipToContent.tsx` — skip link to `#main-content`
+- [x] Create `src/data/siteMetadata.ts` — `pageMeta` per page, `contactInfo` (address, hours, directions, social)
+- [x] Create `src/components/layout/Footer.tsx` — nav links, email, Instagram, "est." line
+- [x] **Commit:** `feat: footer with nav links and contact info` (Skipped per instruction)
 
 ---
 
-- [ ] Create `src/components/layout/Layout.tsx` — `SkipToContent` + `Navbar` + `<main id="main-content">` + `Outlet` + `Footer`
-- [ ] Update `src/App.tsx` — Layout route wrapping all 6 routes (Home, Our Story, Shelves & Cups, Events, Visit, NotFound); stub each page as a one-liner placeholder component inline so routing works
-- [ ] Update `src/main.tsx` — add `ScrollToTop` using `useLocation`
-- [ ] **Commit:** `feat: layout shell with routing and scroll-to-top`
+- [x] Create `src/components/layout/Layout.tsx` — `SkipToContent` + `Navbar` + `<main id="main-content">` + `Outlet` + `Footer`
+- [x] Update `src/App.tsx` — Layout route wrapping all 6 routes (Home, Our Story, Shelves & Cups, Events, Visit, NotFound); stub each page as a one-liner placeholder component inline so routing works
+- [x] Update `src/main.tsx` — add `ScrollToTop` using `useLocation`
+- [x] **Commit:** `feat: layout shell with routing and scroll-to-top` (Skipped per instruction)
 
 ---
 
-- [ ] Smoke-test: `npm run dev` — visit all routes, confirm nav and footer render, confirm scroll-to-top works, confirm mobile toggle works
-- [ ] **Commit:** `chore: layout shell verified`
+- [x] Smoke-test: `npm run dev` — visit all routes, confirm nav and footer render, confirm scroll-to-top works, confirm mobile toggle works
+- [x] **Commit:** `chore: layout shell verified` (Skipped per instruction)
+
 
 ---
 
