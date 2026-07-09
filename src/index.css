@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @layer base {
+
   /* Smooth scrolling — disabled for reduced motion */
   html {
     scroll-behavior: smooth;
@@ -12,8 +13,10 @@
     html {
       scroll-behavior: auto;
     }
-    
-    *, *::before, *::after {
+
+    *,
+    *::before,
+    *::after {
       animation-duration: 0.01ms !important;
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
@@ -28,7 +31,10 @@
   }
 
   /* Typography defaults */
-  h1, h2, h3, h4 {
+  h1,
+  h2,
+  h3,
+  h4 {
     @apply font-serif text-ink-black;
     line-height: 1.2;
   }
@@ -49,4 +55,14 @@
   img {
     @apply max-w-full h-auto block;
   }
+}
+
+/* Hide scrollbar globally */
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
 }
