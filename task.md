@@ -160,20 +160,20 @@ Organized as feature branches with atomic commits. Build only what the current p
 
 ## Branch: `feat/events-page`
 
-- [ ] Create `src/data/eventsData.ts` — 5 events
-- [ ] **Commit:** `feat: events data`
+- [x] Create `src/data/eventsData.ts` — 5 events
+- [ ] **Commit:** `feat: events data` (Skipped per instruction)
 
 ---
 
-- [ ] Create `src/pages/events/components/EventCard.tsx` — `<motion.article>` with `whileInView` fade-up (Motion Moment 3), `once: true`, stagger by `index`, `<time datetime>`, date formatter, `Tag`; reduced-motion guard
-- [ ] Create `src/pages/events/components/EmptyState.tsx` — `MoonIcon`, in-voice message
-- [ ] Create `src/pages/events/components/EventList.tsx` — vertical stack, optional "Past Events" heading + `opacity-60`
-- [ ] **Commit:** `feat: event card with scroll animation, event list, empty state`
+- [x] Create `src/pages/events/components/EventCard.tsx` — `<motion.article>` with `whileInView` fade-up (Motion Moment 3), `once: true`, stagger by `index`, `<time datetime>`, date formatter, `Tag`; reduced-motion guard
+- [x] Create `src/pages/events/components/EmptyState.tsx` — `MoonIcon`, in-voice message
+- [x] Create `src/pages/events/components/EventList.tsx` — vertical stack, optional "Past Events" heading + `opacity-60`
+- [x] **Commit:** `feat: event card with scroll animation, event list, empty state` (Skipped per instruction)
 
 ---
 
-- [ ] Assemble `src/pages/events/index.tsx` — `usePageMeta`, `PageHeader`, upcoming/past split logic, `EventList` or `EmptyState`, `NextPageLink`
-- [ ] **Commit:** `feat: events page complete`
+- [x] Assemble `src/pages/events/index.tsx` — `usePageMeta`, `PageHeader`, upcoming/past split logic, `EventList` or `EmptyState`, `NextPageLink`
+- [x] **Commit:** `feat: events page complete` (Skipped per instruction)
 
 ---
 
