@@ -179,21 +179,21 @@ Organized as feature branches with atomic commits. Build only what the current p
 
 ## Branch: `feat/visit-page`
 
-- [ ] Generate images: `visit-entrance.jpg`, `visit-interior.jpg`, `visit-window.jpg` — place in `public/images/`
-- [ ] **Commit:** `assets: visit page images`
+- [x] Generate images: `visit-entrance.jpg`, `visit-interior.jpg`, `visit-window.jpg` — place in `public/images/` (Already completed as webp)
+- [x] **Commit:** `assets: visit page images` (Skipped per instruction)
 
 ---
 
-- [ ] Create `src/pages/visit/components/AddressBlock.tsx` — `MoonIcon`, address lines, email and Instagram links
-- [ ] Create `src/pages/visit/components/HoursTable.tsx` — `<dl>` rows, highlight today's day, "Closed" italic styling
-- [ ] Create `src/pages/visit/components/AmbianceGallery.tsx` — 3× `FramedImage` with varied rotations and captions; first image `loading="eager"`, others `lazy`
-- [ ] Create `src/pages/visit/components/DirectionsBlurb.tsx` — heading + body text from `contactInfo.directions`
-- [ ] **Commit:** `feat: visit page components`
+- [x] Create `src/pages/visit/components/AddressBlock.tsx` — `MoonIcon`, address lines, email and Instagram links
+- [x] Create `src/pages/visit/components/HoursTable.tsx` — `<dl>` rows, highlight today's day, "Closed" italic styling
+- [x] Create `src/pages/visit/components/AmbianceGallery.tsx` — 3× `FramedImage` with varied rotations and captions; first image `loading="eager"`, others `lazy`
+- [x] Create `src/pages/visit/components/DirectionsBlurb.tsx` — heading + body text from `contactInfo.directions`
+- [x] **Commit:** `feat: visit page components` (Skipped per instruction)
 
 ---
 
-- [ ] Assemble `src/pages/visit/index.tsx` — `usePageMeta`, `PageHeader`, two-column layout (AddressBlock + HoursTable / AmbianceGallery), `DirectionsBlurb`
-- [ ] **Commit:** `feat: visit page complete`
+- [x] Assemble `src/pages/visit/index.tsx` — `usePageMeta`, `PageHeader`, two-column layout (AddressBlock + HoursTable / AmbianceGallery), `DirectionsBlurb`
+- [x] **Commit:** `feat: visit page complete` (Skipped per instruction)
 
 ---
 
