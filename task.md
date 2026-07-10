@@ -127,34 +127,34 @@ Organized as feature branches with atomic commits. Build only what the current p
 
 ## Branch: `feat/shelves-and-cups-page`
 
-- [ ] Create `src/data/shelvesData.ts` — 14 items + `featuredItem` + `featuredNote`
-- [ ] **Commit:** `feat: shelves and cups data`
+- [x] Create `src/data/shelvesData.ts` — 14 items + `featuredItem` + `featuredNote`
+- [ ] **Commit:** `feat: shelves and cups data` (Skipped per instruction)
 
 ---
 
-- [ ] Create `src/assets/icons/BookIcon.tsx`
-- [ ] Create `src/assets/icons/CupIcon.tsx`
-- [ ] Create `src/components/ui/Tag.tsx` — small chip in `dusty-sage/20`, text `walnut-brown`
-- [ ] Create `src/components/ui/FilterToggle.tsx` — `role="tablist"`, arrow-key navigation, active/inactive states, responsive (full-width mobile, inline desktop)
-- [ ] **Commit:** `feat: filter toggle with full keyboard and ARIA support`
+- [x] Create `src/assets/icons/BookIcon.tsx` (Completed by user)
+- [x] Create `src/assets/icons/CupIcon.tsx` (Completed by user)
+- [x] Create `src/components/ui/Tag.tsx` — small chip in `dusty-sage/20`, text `walnut-brown`
+- [x] Create `src/components/ui/FilterToggle.tsx` — `role="tablist"`, arrow-key navigation, active/inactive states, responsive (full-width mobile, inline desktop)
+- [ ] **Commit:** `feat: filter toggle with full keyboard and ARIA support` (Skipped per instruction)
 
 ---
 
-- [ ] Generate image: `featured-book.jpg` — place in `public/images/`
-- [ ] Create `src/pages/shelves-and-cups/components/FeaturedItem.tsx` — dark bg section, `FramedImage`, label/title/author/description/handwritten note
-- [ ] **Commit:** `feat: featured book section`
+- [x] Generate image: `featured-book.jpg` — place in `public/images/` (Already completed)
+- [x] Create `src/pages/shelves-and-cups/components/FeaturedItem.tsx` — dark bg section, `FramedImage`, label/title/author/description/handwritten note
+- [x] **Commit:** `feat: featured book section` (Skipped per instruction)
 
 ---
 
-- [ ] Create `src/pages/shelves-and-cups/components/ItemCard.tsx` — card with `Tag`, icon, title, author, description, price; `line-clamp` overflow; Framer Motion constellation hover-line SVG (Motion Moment 2)
-- [ ] Add `animate-fadeIn` keyframe to `src/index.css`
-- [ ] Create `src/pages/shelves-and-cups/components/ShelvesGrid.tsx` — responsive 1→2→3 grid, `key={activeFilter}` for CSS crossfade
-- [ ] **Commit:** `feat: shelves grid with item cards and constellation hover animation`
+- [x] Create `src/pages/shelves-and-cups/components/ItemCard.tsx` — card with `Tag`, icon, title, author, description, price; `line-clamp` overflow; Framer Motion constellation hover-line SVG (Motion Moment 2)
+- [x] Add `animate-fadeIn` keyframe to `src/index.css`
+- [x] Create `src/pages/shelves-and-cups/components/ShelvesGrid.tsx` — responsive 1→2→3 grid, `key={activeFilter}` for CSS crossfade
+- [x] **Commit:** `feat: shelves grid with item cards and constellation hover animation` (Skipped per instruction)
 
 ---
 
-- [ ] Assemble `src/pages/shelves-and-cups/index.tsx` — `usePageMeta`, `PageHeader`, `FeaturedItem`, `FilterToggle` + filter logic, `ShelvesGrid`, `NextPageLink`
-- [ ] **Commit:** `feat: shelves and cups page complete`
+- [x] Assemble `src/pages/shelves-and-cups/index.tsx` — `usePageMeta`, `PageHeader`, `FeaturedItem`, `FilterToggle` + filter logic, `ShelvesGrid`, `NextPageLink`
+- [x] **Commit:** `feat: shelves and cups page complete` (Skipped per instruction)
 
 ---
 
