@@ -100,27 +100,28 @@ Organized as feature branches with atomic commits. Build only what the current p
 
 ## Branch: `feat/our-story-page`
 
-- [ ] Generate images: `story-exterior.jpg`, `story-shelves.jpg`, `story-cups.jpg`, `story-moon.jpg` — place in `public/images/`
-- [ ] **Commit:** `assets: our story images`
+- [x] Generate images: `story-exterior.jpg`, `story-shelves.jpg`, `story-cups.jpg`, `story-moon.jpg` — place in `public/images/` (Already completed)
+- [x] **Commit:** `assets: our story images` (Skipped per instruction)
 
 ---
 
-- [ ] Create `src/components/ui/FramedImage.tsx` — polaroid wrapper, `loading="lazy"`, `rotate` via `className`, caption in Caveat font
-- [ ] Create `src/components/ui/PullQuote.tsx` — serif italic blockquote, decorative `"` character (`aria-hidden`), attribution in `walnut-brown/70`
-- [ ] Create `src/pages/our-story/components/StoryPassage.tsx` — two-column layout, text + `FramedImage`, `reverse` prop
-- [ ] **Commit:** `feat: story passage component with framed image and pull quote`
+- [x] Create `src/components/ui/FramedImage.tsx` — polaroid wrapper, `loading="lazy"`, `rotate` via `className`, caption in Caveat font
+- [x] Create `src/components/ui/PullQuote.tsx` — serif italic blockquote, decorative `"` character (`aria-hidden`), attribution in `walnut-brown/70`
+- [x] Create `src/pages/our-story/components/StoryPassage.tsx` — two-column layout, text + `FramedImage`, `reverse` prop
+- [x] **Commit:** `feat: story passage component with framed image and pull quote` (Skipped per instruction)
 
 ---
 
-- [ ] Create `src/components/common/NextPageLink.tsx` — needs `GhostButton`
-- [ ] Create `src/components/ui/GhostButton.tsx` — outline button, renders as `<Link>` if `href` provided
-- [ ] **Commit:** `feat: ghost button and next-page link`
+- [x] Create `src/components/common/NextPageLink.tsx` — needs `GhostButton`
+- [x] Create `src/components/ui/GhostButton.tsx` — outline button, renders as `<Link>` if `href` provided
+- [x] **Commit:** `feat: ghost button and next-page link` (Skipped per instruction)
 
 ---
 
-- [ ] Assemble `src/pages/our-story/index.tsx` — `usePageMeta`, `PageHeader`, 4× `StoryPassage`, `PullQuote`, `NextPageLink`
-- [ ] Create `src/components/common/PageHeader.tsx` — dark section with `MoonIcon`, `<h1>`, optional subtitle (needed here and by all remaining pages)
-- [ ] **Commit:** `feat: our story page complete`
+- [x] Assemble `src/pages/our-story/index.tsx` — `usePageMeta`, `PageHeader`, 4× `StoryPassage`, `PullQuote`, `NextPageLink`
+- [x] Create `src/components/common/PageHeader.tsx` — dark section with `MoonIcon`, `<h1>`, optional subtitle (needed here and by all remaining pages)
+- [x] **Commit:** `feat: our story page complete` (Skipped per instruction)
+
 
 ---
 
