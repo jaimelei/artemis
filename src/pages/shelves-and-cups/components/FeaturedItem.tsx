@@ -1,22 +1,40 @@
+import { motion } from 'framer-motion';
 import { FramedImage } from '../../../components/ui/FramedImage';
 import { featuredItem, featuredNote } from '../../../data/shelvesData';
+import { useReducedMotion } from '../../../hooks/useReducedMotion';
 
 export function FeaturedItem() {
+  const reduced = useReducedMotion();
+  const EASE = [0.25, 0.1, 0.25, 1] as const;
+
+  const anim = (delay: number) => ({
+    initial: reduced ? false : { opacity: 0, y: 30 },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: { once: true, margin: '-50px' },
+    transition: reduced ? { duration: 0 } : { duration: 0.8, delay, ease: EASE },
+  });
+
   return (
-    <section className="bg-midnight-navy py-16 md:py-24 px-6 text-moon-ivory border-b border-moon-ivory/5">
+    <section className="bg-midnight-navy py-16 md:py-24 px-6 text-moon-ivory border-b border-moon-ivory/5 overflow-hidden">
       <div className="max-w-content mx-auto flex flex-col md:flex-row items-center gap-12 md:gap-20">
         {/* Image Column */}
-        <div className="flex-1 flex justify-center w-full max-w-sm">
+        <motion.div 
+          {...anim(0.15)}
+          className="flex-1 flex justify-center w-full max-w-sm"
+        >
           <FramedImage
             src={featuredItem.imageSrc}
             alt={featuredItem.imageAlt}
             caption="Recommendation of the Moon"
             rotate="right"
           />
-        </div>
+        </motion.div>
 
         {/* Info Column */}
-        <div className="flex-1 max-w-reading">
+        <motion.div 
+          {...anim(0.3)}
+          className="flex-1 max-w-reading"
+        >
           <span className="inline-block border border-antique-gold/40 text-antique-gold px-3 py-1 text-xs tracking-wider uppercase font-sans font-medium rounded-full mb-4">
             {featuredItem.tag}
           </span>
@@ -39,10 +57,11 @@ export function FeaturedItem() {
               {featuredNote.sign}
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
 }
 
 export default FeaturedItem;
+

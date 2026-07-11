@@ -1,4 +1,6 @@
 import { useRef, KeyboardEvent } from 'react';
+import { motion } from 'framer-motion';
+import { useReducedMotion } from '../../hooks/useReducedMotion';
 
 interface FilterOption {
   value: string;
@@ -13,6 +15,8 @@ interface FilterToggleProps {
 
 export function FilterToggle({ options, selectedValue, onChange }: FilterToggleProps) {
   const containerRef = useRef<HTMLDivElement>(null);
+  const reduced = useReducedMotion();
+  const EASE = [0.25, 0.1, 0.25, 1] as const;
 
   const handleKeyDown = (e: KeyboardEvent<HTMLButtonElement>, index: number) => {
     let nextIndex: number | null = null;
@@ -35,12 +39,20 @@ export function FilterToggle({ options, selectedValue, onChange }: FilterToggleP
     }
   };
 
+  const anim = {
+    initial: reduced ? false : { opacity: 0, y: 15 },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: { once: true },
+    transition: reduced ? { duration: 0 } : { duration: 0.6, ease: EASE },
+  };
+
   return (
-    <div className="w-full flex justify-center py-6 px-6">
-      <div
+    <div className="w-full flex justify-center py-6 px-6 overflow-hidden">
+      <motion.div
         ref={containerRef}
         role="tablist"
         aria-label="Filter menu items"
+        {...anim}
         className="w-full md:w-auto bg-walnut-brown/5 p-1 rounded-lg flex flex-col md:flex-row gap-1"
       >
         {options.map((option, idx) => {
@@ -63,9 +75,10 @@ export function FilterToggle({ options, selectedValue, onChange }: FilterToggleP
             </button>
           );
         })}
-      </div>
+      </motion.div>
     </div>
   );
 }
 
 export default FilterToggle;
+

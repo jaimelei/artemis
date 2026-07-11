@@ -1,4 +1,6 @@
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { useReducedMotion } from '../../../hooks/useReducedMotion';
 
 interface Doorway {
   image: string;
@@ -29,34 +31,59 @@ const doorways: Doorway[] = [
 ];
 
 export function Doorways() {
+  const reduced = useReducedMotion();
+  const EASE = [0.25, 0.1, 0.25, 1] as const;
+
+  const getAnim = (delay: number) => ({
+    initial: reduced ? false : { opacity: 0, y: 15 },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: { once: true, margin: '-50px' },
+    transition: reduced ? { duration: 0 } : { duration: 0.6, delay, ease: EASE },
+  });
+
   return (
     <section className="bg-moon-ivory pb-24 md:pb-40 px-6">
-      <div className="max-w-content mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-        {doorways.map((doorway, i) => (
-          <Link
-            key={i}
-            to={doorway.path}
-            className="group flex flex-col focus:outline-none"
-          >
-            <div className="aspect-[4/5] rounded-xl overflow-hidden mb-5">
-              <img
-                src={doorway.image}
-                alt=""
-                loading="lazy"
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-              />
-            </div>
-            <h2 className="font-serif text-xl text-ink-black mb-2 group-hover:text-antique-gold transition-colors duration-200">
-              {doorway.title}
-            </h2>
-            <p className="font-sans text-base text-walnut-brown">
-              {doorway.description}
-            </p>
-          </Link>
-        ))}
+      <div className="max-w-content mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
+        {doorways.map((doorway, i) => {
+          // Stagger the columns, then stagger internal elements
+          const baseDelay = i * 0.15;
+          return (
+            <Link
+              key={i}
+              to={doorway.path}
+              className="group flex flex-col focus:outline-none"
+            >
+              <motion.div 
+                {...getAnim(baseDelay)} 
+                className="aspect-[4/5] rounded-xl overflow-hidden mb-5"
+              >
+                <img
+                  src={doorway.image}
+                  alt=""
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                />
+              </motion.div>
+              <motion.h2 
+                {...getAnim(baseDelay + 0.15)}
+                className="font-serif text-xl text-ink-black mb-2 group-hover:text-antique-gold transition-colors duration-200"
+              >
+                {doorway.title}
+              </motion.h2>
+              <motion.p 
+                {...getAnim(baseDelay + 0.3)}
+                className="font-sans text-base text-walnut-brown"
+              >
+                {doorway.description}
+              </motion.p>
+            </Link>
+          );
+        })}
       </div>
     </section>
   );
 }
 
+
 export default Doorways;
+

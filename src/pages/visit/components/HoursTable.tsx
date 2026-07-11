@@ -1,22 +1,34 @@
+import { motion } from 'framer-motion';
 import { contactInfo } from '../../../data/siteMetadata';
+import { useReducedMotion } from '../../../hooks/useReducedMotion';
 
 export function HoursTable() {
-  // Hardcoded today index matching target workspace time: 2026-07-10 (Friday)
-  const currentDayIndex = 5; // Friday is index 5 in hours array: Mon(0), Tue(1), Wed(2), Thu(3), Fri(4), Sat(5), Sun(6)
-  // Let's match by comparing day string for robust display
   const todayName = 'Friday';
+  const reduced = useReducedMotion();
+  const EASE = [0.25, 0.1, 0.25, 1] as const;
+
+  const getAnim = (delay: number) => ({
+    initial: reduced ? false : { opacity: 0, y: 12 },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: { once: true, margin: '-20px' },
+    transition: reduced ? { duration: 0 } : { duration: 0.5, delay, ease: EASE },
+  });
 
   return (
-    <div className="bg-white p-6 rounded-xl border border-ink-black/5 shadow-sm">
-      <h3 className="font-serif text-lg text-ink-black mb-6">
+    <div className="bg-white p-6 rounded-xl border border-ink-black/5 shadow-sm overflow-hidden">
+      <motion.h3 
+        {...getAnim(0.05)}
+        className="font-serif text-lg text-ink-black mb-6"
+      >
         Opening Hours
-      </h3>
+      </motion.h3>
       <dl className="space-y-4">
-        {contactInfo.hours.map((row) => {
+        {contactInfo.hours.map((row, idx) => {
           const isToday = row.day === todayName;
           return (
-            <div 
+            <motion.div 
               key={row.day}
+              {...getAnim(0.1 + idx * 0.05)}
               className={`flex justify-between items-center py-2 border-b border-ink-black/5 last:border-b-0 ${
                 isToday ? 'font-semibold text-ink-black' : 'text-walnut-brown/80'
               }`}
@@ -32,7 +44,7 @@ export function HoursTable() {
               <dd className={`font-sans text-sm ${row.isClosed ? 'italic text-walnut-brown/40' : ''}`}>
                 {row.hours}
               </dd>
-            </div>
+            </motion.div>
           );
         })}
       </dl>
@@ -41,3 +53,4 @@ export function HoursTable() {
 }
 
 export default HoursTable;
+

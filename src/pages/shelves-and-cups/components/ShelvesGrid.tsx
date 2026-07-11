@@ -13,12 +13,13 @@ export function ShelvesGrid({ items, activeFilter }: ShelvesGridProps) {
         key={activeFilter}
         className="max-w-content mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-fadeIn"
       >
-        {items.map((item) => (
-          <ItemCard key={item.id} item={item} />
+        {items.map((item, index) => (
+          <ItemCard key={item.id} item={item} index={index} />
         ))}
       </div>
     </section>
   );
 }
+
 
 export default ShelvesGrid;

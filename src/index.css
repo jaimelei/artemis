@@ -76,8 +76,31 @@
   animation: fadeIn 0.35s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
 }
 
+/* Native CSS Scroll Reveal animations */
+@keyframes revealFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal-on-scroll {
+  /* Only animate if browser supports view-timeline */
+  view-timeline-name: --revealing-item;
+  view-timeline-axis: block;
+  animation-name: revealFadeUp;
+  animation-fill-mode: both;
+  animation-timeline: --revealing-item;
+  animation-range: entry 10% cover 30%;
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .animate-fadeIn {
+  .animate-fadeIn,
+  .reveal-on-scroll {
     animation: none !important;
   }
 }

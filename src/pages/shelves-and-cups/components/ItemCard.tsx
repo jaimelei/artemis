@@ -7,14 +7,26 @@ import type { ShelfItem } from '../../../types';
 
 interface ItemCardProps {
   item: ShelfItem;
+  index: number;
 }
 
-export function ItemCard({ item }: ItemCardProps) {
+export function ItemCard({ item, index }: ItemCardProps) {
   const reduced = useReducedMotion();
   const isBook = item.category === 'book';
+  const EASE = [0.25, 0.1, 0.25, 1] as const;
+
+  const cardAnim = {
+    initial: reduced ? false : { opacity: 0, y: 25 },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: { once: true, margin: '-40px' },
+    transition: reduced ? { duration: 0 } : { duration: 0.6, delay: (index % 3) * 0.1, ease: EASE },
+  };
 
   return (
-    <div className="group relative bg-white p-6 rounded-xl border border-ink-black/5 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col justify-between overflow-hidden">
+    <motion.div 
+      {...cardAnim}
+      className="group relative bg-white p-6 rounded-xl border border-ink-black/5 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col justify-between overflow-hidden"
+    >
       {/* Signature Animation: Constellation Hover Line SVG (Budget item 2) */}
       <div className="absolute top-0 left-0 w-full h-[3px] bg-walnut-brown/5 overflow-hidden">
         <motion.div
@@ -24,6 +36,7 @@ export function ItemCard({ item }: ItemCardProps) {
           transition={reduced ? { duration: 0 } : { duration: 0.4, ease: 'easeInOut' }}
         />
       </div>
+
 
       <div>
         <div className="flex justify-between items-start gap-4 mb-4">
@@ -55,7 +68,7 @@ export function ItemCard({ item }: ItemCardProps) {
           {item.description}
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
