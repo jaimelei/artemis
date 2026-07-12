@@ -15,7 +15,7 @@ export function Hero() {
     });
 
     return (
-        <section className="relative min-h-[calc(100vh-68px)] flex items-center justify-center bg-midnight-navy overflow-hidden px-6">
+        <section className="relative min-h-[calc(100vh-60px)] flex items-center justify-center bg-midnight-navy overflow-hidden px-6">
             {/* Moonrise glow — rises and fades in behind the text on load */}
             <motion.div
                 aria-hidden="true"
