@@ -59,10 +59,13 @@ export function Hero() {
                 </motion.p>
             </div>
 
-            {/* Scroll hint — CSS-only pulse, not part of the Framer Motion budget */}
-            <div
+            {/* Scroll hint — fades/slides in on load, then loops a pulse */}
+            <motion.div
                 aria-hidden="true"
                 className="absolute bottom-8 left-1/2 -translate-x-1/2 text-moon-ivory/30 animate-pulse motion-reduce:hidden"
+                initial={reduced ? false : { opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={reduced ? { duration: 0 } : { duration: 0.8, delay: 1.2, ease: EASE }}
             >
                 <svg
                     width="24"
@@ -76,8 +79,9 @@ export function Hero() {
                 >
                     <path d="M6 9l6 6 6-6" />
                 </svg>
-            </div>
+            </motion.div>
         </section>
+
     );
 }
 
